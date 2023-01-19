@@ -1,4 +1,5 @@
 import csv
+import time
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -21,12 +22,12 @@ def parse_page():
     ads = []
     for apartment in apartmens[:-1]:
         name_and_price = apartment.find_element(By.CLASS_NAME, "css-u2ayx9")
-        name = name_and_price.find_element(By.TAG_NAME, "h6").text
-        price = apartment.find_element(By.TAG_NAME, "p").text
+        name = name_and_price.find_element(By.CLASS_NAME, "css-16v5mdi").text
+        price = apartment.find_element(By.CLASS_NAME, "css-10b0gli").text
 
         street_and_area = apartment.find_element(By.CLASS_NAME, "css-odp1qd")
-        street = street_and_area.find_element(By.TAG_NAME, "p").text.split("-")[0]
-        area = street_and_area.find_element(By.TAG_NAME, "div").text
+        street = street_and_area.find_element(By.CLASS_NAME, "css-veheph").text.split("-")[0]
+        area = street_and_area.find_element(By.CLASS_NAME, "css-643j0o").text
 
         ads.append([
             name,
