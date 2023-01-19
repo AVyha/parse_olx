@@ -11,8 +11,8 @@ def write_to_csv(data):
     with open("apartmens.csv", "a", encoding='UTF8', newline="") as f:
         writer = csv.writer(f)
 
-        for i in data:
-            writer.writerow(i)
+        for row in data:
+            writer.writerow(row)
 
 
 def parse_page():
@@ -40,6 +40,7 @@ def parse_page():
 
 if __name__ == '__main__':
     driver = webdriver.Chrome()
+    driver.maximize_window()
 
     driver.get(link)
     write_to_csv(parse_page())
