@@ -1,0 +1,6 @@
+venv
+.idea
+apartmens.csv
+credentials.json
+.env
+jupyter.ipynb
