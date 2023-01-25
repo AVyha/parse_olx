@@ -14,3 +14,4 @@ Then you need to create a service account, upload your credentials, and create y
 python write_to_sheet.py
 python parse.py
 ```
+[Example](https://docs.google.com/spreadsheets/d/10AnDppooI6x6GQieVftwvhlFHqbKwKz2dPSm8GWlFVM/edit#gid=0)
